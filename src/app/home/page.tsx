@@ -1,3 +1,9 @@
+import CardSkeleton from '../ui/CardSkeleton'
+
 export default function Home() {
-	return <h1 className='text-4xl font-bold text-center mt-8'>Home Page</h1>
+	return (
+		<div className='w-full flex flex-wrap justify-center gap-6 max-w-7xl pb-6'>
+			<CardSkeleton />
+		</div>
+	)
 }
