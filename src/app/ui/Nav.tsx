@@ -11,12 +11,14 @@ import {
 	NavbarMenuToggle,
 } from '@nextui-org/react'
 import Link from 'next/link'
+import { usePathname } from 'next/navigation'
 import CinemaImg from '../../../public/cinema.png'
 import Image from 'next/image'
 
 const Nav = () => {
 	const [isMenuOpen, setIsMenuOpen] = useState(false)
 	const [activePage, setActivePage] = useState('/')
+	const pathname = usePathname()
 
 	const menuItems = [
 		{
@@ -53,7 +55,7 @@ const Nav = () => {
 						key={index}
 						isActive={item.href === activePage}
 						onClick={() => handlePageChange(item.name)}
-						className={item.href === activePage ? 'text-primary' : ''}
+						className={pathname === item.href ? 'text-primary' : ''}
 					>
 						<Link href={item.href}>{item.name}</Link>
 					</NavbarItem>
@@ -74,6 +76,7 @@ const Nav = () => {
 						key={index}
 						isActive={item.href === activePage}
 						onClick={() => handlePageChange(item.href)}
+						className={pathname === item.href ? 'text-primary' : ''}
 					>
 						<Link href={item.href}>{item.name}</Link>
 					</NavbarMenuItem>
