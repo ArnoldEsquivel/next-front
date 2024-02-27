@@ -2,6 +2,8 @@
 
 Welcome to the documentation for our Next.js Movies project! This project serves as a frontend interface for accessing movie data, with a backend implemented in Nest.js. Below, you'll find detailed instructions on how to set up the project, navigate through its pages, and interact with its components.
 
+> Before interacting with the frontend components, make sure to start the backend server. You can find the frontend repository [here](<https://github.com/ArnoldEsquivel/nest-back.git>).
+
 ## Installation
 
 To get started, follow these steps:
@@ -40,8 +42,8 @@ Once the server is up and running, you can access the application at [http://loc
 - The Search page provides users with access to the complete list of movies.
 - Users can filter the movie list by entering a movie title in the search bar.
 
-#### Movie Details Page
-- Clicking on the description of any movie on either the Home or Search page leads users to the Movie Details page.
+#### Movie Details Component
+- Clicking on the description of any movie on either the Home or Search page leads users to the Movie Details component.
 - Here, users can view detailed information about the selected movie, including its title, release date, and overview.
 
 ## Note
