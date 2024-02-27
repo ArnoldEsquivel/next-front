@@ -25,7 +25,7 @@ export default function Search() {
 
 	return (
 		<>
-			<div className='w-full flex justify-center gap-6 max-w-3xl pb-6'>
+			<div className='w-full flex justify-center gap-6 max-w-3xl pb-6 px-6'>
 				<Input
 					label='Search'
 					radius='lg'

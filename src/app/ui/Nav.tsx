@@ -14,6 +14,7 @@ import Link from 'next/link'
 import { usePathname } from 'next/navigation'
 import CinemaImg from '../../../public/cinema.png'
 import Image from 'next/image'
+import ContactMe from './ContactMe'
 
 const Nav = () => {
 	const [isMenuOpen, setIsMenuOpen] = useState(false)
@@ -23,14 +24,10 @@ const Nav = () => {
 	const menuItems = [
 		{
 			name: 'Home',
-			href: '/home',
-		},
-		{
-			name: 'Popular',
 			href: '/',
 		},
 		{
-			name: 'All',
+			name: 'Search',
 			href: '/all',
 		},
 	]
@@ -45,7 +42,7 @@ const Nav = () => {
 				<NavbarMenuToggle aria-label={isMenuOpen ? 'Close menu' : 'Open menu'} className='sm:hidden' />
 				<NavbarBrand>
 					<Image src={CinemaImg} alt='ACME' width={90} height={90} />
-					<p className='font-bold text-inherit'>POPCORNER</p>
+					<p className='font-bold text-inherit hidden sm:block'>POPCORNER</p>
 				</NavbarBrand>
 			</NavbarContent>
 
@@ -55,7 +52,7 @@ const Nav = () => {
 						key={index}
 						isActive={item.href === activePage}
 						onClick={() => handlePageChange(item.name)}
-						className={pathname === item.href ? 'text-primary' : ''}
+						className={pathname === item.href ? 'text-primary font-bold' : 'text-gray-600'}
 					>
 						<Link href={item.href}>{item.name}</Link>
 					</NavbarItem>
@@ -64,9 +61,7 @@ const Nav = () => {
 
 			<NavbarContent justify='end'>
 				<NavbarItem>
-					<Button color='primary' href='#' variant='flat'>
-						Contact Me
-					</Button>
+					<ContactMe />
 				</NavbarItem>
 			</NavbarContent>
 
