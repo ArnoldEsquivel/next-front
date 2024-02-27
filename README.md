@@ -47,4 +47,6 @@ Once the server is up and running, you can access the application at [http://loc
 ## Note
 - To ensure the frontend functions correctly, it is imperative that the backend server is running. Therefore, we recommend starting the backend server before interacting with the frontend components.
 
+> Before interacting with the frontend components, make sure to start the backend server. You can find the frontend repository [here](<https://github.com/ArnoldEsquivel/nest-back.git>).
+
 That's it! You're now ready to explore and interact with our Next.js movie application. If you have any further questions or encounter any issues, please refer to the documentation or reach out to our support team. Happy browsing!
