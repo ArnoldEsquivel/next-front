@@ -2,9 +2,23 @@
 
 Welcome to the documentation for our Next.js Movies project! This project serves as a frontend interface for accessing movie data, with a backend implemented in Nest.js. Below, you'll find detailed instructions on how to set up the project, navigate through its pages, and interact with its components.
 
-> Before interacting with the frontend components, make sure to start the backend server. You can find the frontend repository [here](<https://github.com/ArnoldEsquivel/nest-back.git>).
+## Frontend Features Validation and Justification
+
+This repository contains the frontend application developed with Next.js. Next.js was chosen to leverage its advantages over React, particularly with the option to utilize server components and server actions. These features are instrumental in improving the loading performance of movie components, especially for displaying popular movies where extensive client-side interaction is not necessary. Additionally, for the search functionality, a client-side component was employed to benefit from accessing route parameters, maintaining state, and implementing real-time filtering with a slight delay of 600ms after each user keystroke to enhance performance and user experience. Skeleton loading was implemented to enhance content loading, and the layout was optimized for mobile devices to improve inclusivity.
+
+## Features
+
+- **Server Components:** Utilizes Next.js server components to optimize loading performance, particularly for displaying static content such as popular movies.
+- **Client-side Search Component:** Implements a client-side search component to capitalize on route parameter access, state management, and real-time filtering for enhanced user interaction.
+- **Skeleton Loading:** Enhances content loading experience with skeleton loading placeholders.
+- **Mobile Optimization:** Optimizes layout for mobile devices to improve accessibility across different devices.
+- **Code Quality Assurance:** Incorporates Commitlint for commit structure consistency, Prettier for code formatting, and ESLint for code integrity. Triggers are set up to execute these libraries at specific moments such as commits or pushes.
+
+This section provides validation and justification for the features implemented in the frontend application, emphasizing technical aspects such as architecture choices and design patterns.
 
 ## Installation
+
+> Before interacting with the frontend components, make sure to start the backend server. You can find the frontend repository [here](<https://github.com/ArnoldEsquivel/nest-back.git>).
 
 To get started, follow these steps:
 
